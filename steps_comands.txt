@@ -1,0 +1,32 @@
+# passos para criar projeto
+passo 1:
+criar a virtualenv separada (não criar automaticamente no pycharm) "python -m venv dev_django"
+ativar virtualenv com django
+instalar o django pip install Django==version
+
+passo 2:
+na pasta em que deseja criar o projeto executar o comando "django-admin startproject <myproject>"
+o comando vai criar outra pasta, esta será a pasta real do projeto
+
+passo 3:
+criar meus apps que podem ser mais de um com o comando "django-admin startapp <myapp>"
+
+# rodar servidor web
+passo 1:
+antes de rodar a primeira vez executar o comando "python manage.py migrate" para criar as tabelas padrão
+e tbm rodar o comando "python manage.py createsuperuser --username admin" para adicionar o primeiro e super usuário.
+
+passo 2:
+rodar o comando "python manage.pt runserver"
+
+# comandos de criar as tabelas e migrações
+obs: antes de tudo adicione seus app ao arquivo settings na variavel INSTALLED_APPS
+
+passo 1: crie seu model nos seus apps
+passo 2: importe seu app para arquivo admin
+passo 3: 
+rode o comando "python manage.py makemigrations <myapp>" vai ser criado no app o modulo migrations com as versões
+passo 4:
+para verificar o sql de saída execute o comando "python manage.py sqlmigrate <myapp> <numero versão da migração>"
+passo 5:
+para criar as tabelas rode o comando "python manage.py migrate <myapp> <numero versão da migração>"
