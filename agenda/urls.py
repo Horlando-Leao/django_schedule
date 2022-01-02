@@ -32,6 +32,9 @@ urlslogin = [
 urlsagenda = [
     path('', RedirectView.as_view(url='agenda/')),
     path('agenda/', core_views.lista_eventos),
+
+    path('agenda/evento/', core_views.evento),
+    path('agenda/evento/submit', core_views.submit_evento)
 ]
 
 urlpatterns = [] 
