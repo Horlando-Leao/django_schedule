@@ -30,3 +30,10 @@ passo 4:
 para verificar o sql de saída execute o comando "python manage.py sqlmigrate <myapp> <numero versão da migração>"
 passo 5:
 para criar as tabelas rode o comando "python manage.py migrate <myapp> <numero versão da migração>"
+
+
+# ATUALIZAR TABELA:
+passo1:
+rode o comando "python manage.py makemigrations <myapp>" vai ser criado no app o modulo migrations com as versões
+passo 2:
+para criar as tabelas rode o comando "python manage.py migrate <myapp> <numero versão da migração>"
