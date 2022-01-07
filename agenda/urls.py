@@ -33,6 +33,7 @@ urlsagenda = [
     path('', RedirectView.as_view(url='agenda/')),
     path('agenda/', core_views.lista_eventos),
 
+    path('agenda/lista/<int:id_usuario>', core_views.json_lista_evento),
     path('agenda/evento/', core_views.evento),
     path('agenda/evento/submit', core_views.submit_evento),
     path('agenda/evento/delete/<int:id_evento>/', core_views.delete_evento)
